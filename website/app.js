@@ -1,6 +1,7 @@
 /* Global Variables */
-const url = "https://community-open-weather-map.p.rapidapi.com/weather?id=";
-const APIKey = "a1e14af756msh8cbb345f9d16d18p1d942djsn81e657c479b0";
+//const url = "https://community-open-weather-map.p.rapidapi.com/weather?id=";
+const url = "https://api.openweathermap.org/data/2.5/weather?zip=";
+const APIKey = "&appid=2180fdece3ac5c8aed7d2d961b276565";
 
 //placeholder for weather data
 let weatherData = {};
@@ -52,13 +53,15 @@ function getWeatherData(e){
   */
 
 const callOpenWeatherMap = async(url, code, key)=>{
+    const res = await fetch(url+code+key);
+    /*
     const res = await fetch(url+code, {
         "method": "GET",
         "headers": {
             "x-rapidapi-key": key,
             "x-rapidapi-host": "community-open-weather-map.p.rapidapi.com"
         }
-    })
+    })*/
     try {
       const data = await res.json();
       console.log(data);
