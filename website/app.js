@@ -1,7 +1,8 @@
 /* Global Variables */
 //const url = "https://community-open-weather-map.p.rapidapi.com/weather?id=";
 const url = "https://api.openweathermap.org/data/2.5/weather?zip=";
-const APIKey = "&appid=2180fdece3ac5c8aed7d2d961b276565";
+//const APIKey = "&appid=2180fdece3ac5c8aed7d2d961b276565";
+const APIKey = "&appid=2180fdece3ac5c8aed7d2d961b276565&units=metric";
 
 //placeholder for weather data
 let weatherData = {};
@@ -12,8 +13,9 @@ const generate = document.getElementById('generate');
 const zip = document.getElementById('zip');
 
 // Create a new date instance dynamically with JS
-let d = new Date();
-let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
+let day = new Date();
+//let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
+let newDate = (day.getMonth() + 1) + '/'+ day.getDate()+'/'+ day.getFullYear();
 
 generate.addEventListener('click', getWeatherData);
 
