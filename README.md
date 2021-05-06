@@ -6,3 +6,9 @@ The app finally makes a get request to the server to get the latest info and upd
 This app uses express, body-parser, cors
 makes get and post requests
 any works asynchronously using promises
+
+## Set Up:
+- Download the reop
+- run the terminal in the current folder
+- run command : node server.js
+- go to the browser and go to localhost:8000
